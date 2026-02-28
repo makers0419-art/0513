@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "name": "seyoung_plan_15",
+  "requires_rules": {
+    "writing_rules": "/rules/writing_rules.json",
+    "title_rules": "/rules/title_rules.json",
+    "post_template": "/rules/post_template.json",
+    "image_assets": "/rules/image_assets.json"
+  },
+  "hero_selection_rules": {
+    "strategy": "keyword_overlap_then_topic_then_fallback",
+    "no_duplicate_per_week_if_possible": true,
+    "fallback_ids": ["MULTI_CONSULT_1", "YELLOW_HIGHLIGHT_1"],
+    "match_priority_fields": [
+      "primary_keyword",
+      "longtail_keyword",
+      "secondary_keywords",
+      "audience_pain_points",
+      "outline_hint_topics"
+    ],
+    "match_method": "overlap_any",
+    "note": "image_assets.assets[].keywords/topic과 입력 키워드의 겹침으로 우선 선택"
+  },
+  "plan_object": {
+    "week_start_date": "YYYY-MM-DD",
+    "timezone": "Asia/Seoul",
+    "posting_slots": [
+      { "weekday": "Mon", "times": ["09:30", "13:30", "18:30"] },
+      { "weekday": "Tue", "times": ["09:30", "13:30", "18:30"] },
+      { "weekday": "Wed", "times": ["09:30", "13:30", "18:30"] },
+      { "weekday": "Thu", "times": ["09:30", "13:30", "18:30"] },
+      { "weekday": "Fri", "times": ["09:30", "13:30", "18:30"] }
+    ],
+    "posts": [
+      {
+        "id": "P01",
+        "publish_at": "YYYY-MM-DDTHH:MM:SS",
+        "intent": "commercial",
+        "primary_keyword": "",
+        "longtail_keyword": "",
+        "secondary_keywords": [],
+        "target_audience": "",
+        "audience_pain_points": [],
+        "outline_hint_topics": [],
+        "required_sections": {
+          "numeric_example": true,
+          "real_experience": true,
+          "sources": true,
+          "checklist": true,
+          "faq": true
+        },
+        "hero_image_id": "AUTO",
+        "sources": [
+          { "title": "", "url": "", "type": "official" }
+        ],
+        "internal_link_candidates": [
+          { "title": "", "url_or_post_id": "" }
+        ],
+        "notes_for_writer": "",
+        "quality_gates": {
+          "min_characters": 1600,
+          "min_images": 3,
+          "no_exaggeration": true
+        }
+      }
+    ]
+  }
+}
