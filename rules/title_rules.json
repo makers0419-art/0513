@@ -1,0 +1,22 @@
+{
+  "version": "2.1",
+  "rules": {
+    "primary_keyword_position": "front",
+    "max_length": 45,
+    "recommended_length_chars_range": [20, 38],
+    "hard_max_length": 45,
+    "include_number_when_possible": true,
+    "prefer_specificity": true,
+    "prefer_longtail": true,
+    "avoid_prefix": ["긴급", "자영업"],
+    "ban_exaggerations": ["100%", "무조건", "0원", "확정", "절대"],
+    "avoid_repeat_in_intro": true,
+    "formats": [
+      "{KEYWORD}, 가산세 {RATE}%… 감면 구간 놓치면 얼마?",
+      "{KEYWORD}, 수입 {AMOUNT}이면 가산세 {VALUE}? 감면 가능성 체크",
+      "{TARGET} {KEYWORD}, 가산세 줄이는 현실적인 방법",
+      "{KEYWORD} 놓쳤다면? 가산세와 감면 기준 정리",
+      "{KEYWORD}, 지금 신고가 유리한지 계산해봤습니다"
+    ]
+  }
+}
