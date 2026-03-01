@@ -1,23 +1,42 @@
 {
-  "version": "2.5",
+  "version": "2.7",
   "min_characters": 1600,
   "image_count": 4,
-  "faq_count": 4,
+  "faq_count": 5,
   "structure": {
     "title": "\n\n# {TITLE}\n\n",
     "wrapper_start": "\n\n",
+
     "intro": "\n\n{HOOK}\n\n\n\n이 글을 읽으면: {VALUE_PROMISE}\n\n\n\n  * {TAKEAWAY_1}\n  * {TAKEAWAY_2}\n  * {TAKEAWAY_3}\n\n\n\n{CONTEXT_PARAGRAPH}\n\n",
-    "image_block": "\n\n\n\n{CAPTION}\n\n",
+
+    "toc": "\n\n## 목차\n\n{TOC_ITEMS}\n\n",
+
+    "deadline_box": "\n\n<div style=\"padding:14px 16px; border:1px solid #fee2e2; border-radius:12px; background:#fff7f7; margin:18px 0;\">\n<b>기한/주의</b><br>\n{DEADLINE_LINES}\n</div>\n\n",
+
     "section_h2": "\n\n## {H2}\n\n",
+
     "paragraph": "\n\n{PARAGRAPH}\n\n",
+
+    "mid_summary_box": "\n\n<div style=\"padding:14px 16px; border:1px solid #e5e7eb; border-radius:12px; background:#fafafa; margin:18px 0;\">\n<b>중간 요약</b><br>\n{MID_SUMMARY_LINES}\n</div>\n\n",
+
+    "image_block": "\n\n<div style=\"text-align:center; margin:18px 0;\">\n  <img src=\"{IMAGE_URL}\" alt=\"{IMAGE_ALT}\" style=\"max-width:100%; border-radius:12px;\" />\n  <div style=\"font-size:13px; color:#666; margin-top:8px;\">{CAPTION}</div>\n</div>\n\n",
+
     "table": "{TABLE_HTML}",
-    "checklist": "\n\n## 바로 확인할 체크리스트\n\n\n\n{CHECKLIST_ITEMS}\n",
-    "sources_section": "\n## 공식 근거/출처\n\n\n\n{SOURCE_LINK_ITEMS}\n",
-    "experience_section": "\n\n## 실무에서 자주 나오는 케이스\n\n\n\n{REAL_EXPERIENCE}\n\n",
-    "faq_section": "\n\n## 자주 묻는 질문\n\n\n{FAQ_ITEMS}",
-    "author_trust_block": "\n\n\n 세영세무회계 김영훈 회계사\n\n세무기장·세무자문 중심으로 실무 기준에서 설명드립니다. (사안별 사실관계에 따라 결론이 달라질 수 있습니다.)\n\n{CONTACT_LINES}\n\n",
-    "cta": "\n\n<div style=\"margin-top: 50px; border-top: 2px solid #0068c3; padding-top: 30px;\">\n    <h3 style=\"text-align: center; border: none; margin-bottom: 20px;\">세무 고민, 혼자 끙끙 앓지 마세요.</h3>\n\n    <a href=\"tel:02-6953-2587\" style=\"text-decoration: none; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: #333; margin: 20px 0 20px 0; background-color: #f1f3f5; border-radius: 12px; border: 1px solid #ddd; cursor: pointer;\">\n        📞 1:1 전화 상담 : 02-6953-2587\n    </a>\n\n    <div class=\"cta-image-container\" style=\"text-align: center; margin: 30px 0;\">\n        <a href=\"http://pf.kakao.com/_UHxnxan/chat\" class=\"cta-image-link\" target=\"_blank\">\n            <img src=\"https://github.com/makers0419-art/0513/blob/main/%ED%95%98%EB%8B%A8%EB%B0%B0%EB%84%88.jpg?raw=true\" alt=\"세영세무회계 1:1 상담 바로가기\" style=\"max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">\n        </a>\n    </div>\n</div>\n\n",
+
+    "checklist": "\n\n## 바로 확인할 체크리스트\n\n{CHECKLIST_ITEMS}\n",
+
+    "experience_section": "\n\n## 실무에서 자주 나오는 케이스\n\n{REAL_EXPERIENCE}\n\n",
+
+    "faq_section": "\n\n## 자주 묻는 질문\n\n{FAQ_ITEMS}",
+
+    "sources_section": "\n\n## 공식 근거/출처\n\n{SOURCE_LINK_ITEMS}\n",
+
+    "author_trust_block": "\n\n세영세무회계 김영훈 회계사\n\n세무기장·세무자문 중심으로 실무 기준에서 설명드립니다. (사안별 사실관계에 따라 결론이 달라질 수 있습니다.)\n\n{CONTACT_LINES}\n\n",
+
+    "cta": "\n\n<div style=\"margin-top: 50px; border-top: 2px solid #0068c3; padding-top: 30px;\">\n    <h3 style=\"text-align: center; border: none; margin-bottom: 20px;\">세무 고민, 혼자 끙끙 앓지 마세요.</h3>\n\n    <a href=\"tel:0269532587\" style=\"text-decoration: none; display:block; padding:18px 14px; font-size:22px; font-weight:bold; color:#333; margin:20px 0; background-color:#f1f3f5; border-radius:12px; border:1px solid #ddd; text-align:center;\">\n        📞 1:1 전화 상담 : 02-6953-2587\n    </a>\n\n    <div style=\"text-align: center; margin: 30px 0;\">\n        <a href=\"http://pf.kakao.com/_UHxnxan/chat\" target=\"_blank\">\n            <img src=\"https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/%ED%95%98%EB%8B%A8%EB%B0%B0%EB%84%88.jpg\" alt=\"세영세무회계 1:1 상담 바로가기\" style=\"max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">\n        </a>\n    </div>\n</div>\n\n",
+
     "tags": "\n\n{TAGS_INLINE}\n\n",
+
     "wrapper_end": "\n\n"
   }
 }
