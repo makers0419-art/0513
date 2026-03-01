@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "seyoung_plan_15",
   "requires_rules": {
     "writing_rules": "/rules/writing_rules.json",
@@ -10,7 +10,7 @@
   "hero_selection_rules": {
     "strategy": "keyword_overlap_then_topic_then_fallback",
     "no_duplicate_per_week_if_possible": true,
-    "fallback_ids": ["MULTI_CONSULT_1", "YELLOW_HIGHLIGHT_1"],
+    "fallback_ids": ["TAX_AUDIT_WARN_1", "BUSINESS_STATUS_WARN_1"],
     "match_priority_fields": [
       "primary_keyword",
       "longtail_keyword",
@@ -50,16 +50,12 @@
           "faq": true
         },
         "hero_image_id": "AUTO",
-        "sources": [
-          { "title": "", "url": "", "type": "official" }
-        ],
-        "internal_link_candidates": [
-          { "title": "", "url_or_post_id": "" }
-        ],
+        "sources": [{ "title": "", "url": "", "type": "official" }],
+        "internal_link_candidates": [{ "title": "", "url_or_post_id": "" }],
         "notes_for_writer": "",
         "quality_gates": {
           "min_characters": 1600,
-          "min_images": 3,
+          "min_images": 4,
           "no_exaggeration": true
         }
       }
