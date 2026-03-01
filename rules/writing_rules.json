@@ -6,34 +6,77 @@
     "avoid_ai_phrases": true,
     "avoid_exaggeration": true,
     "avoid_slang": true,
-    "prefer_short_sentences": true,
-    "forbid_absolute_claims": true,
-    "safe_phrasing_examples": [
-      "일반적으로",
-      "사안별로 달라질 수 있습니다",
-      "최종 판단은 증빙과 사실관계에 따라 달라집니다"
-    ]
+    "prefer_short_sentences": true
   },
   "naver_blog": {
     "mobile_first": true,
-    "title_mobile_truncation_guard": {
-      "recommended_chars": [22, 34],
-      "avoid_symbols_overuse": true
+    "toc": {
+      "enabled": true,
+      "position": "after_intro",
+      "max_items": 6
+    },
+    "mid_summary": {
+      "enabled": true,
+      "min_read_time_seconds": 45
     },
     "representative_image": {
       "required": true,
       "prefer_first_block": true,
       "caption_keyword_soft": true
     },
-    "toc": {
-      "enabled": true,
-      "position": "after_intro",
-      "max_items": 6
+    "dwell_time_design": {
+      "require_mid_summary_box": true,
+      "require_checklist_before_faq": true
+    }
+  },
+  "intent_engine": {
+    "intents": [
+      "정보형",
+      "위기형",
+      "비교형",
+      "전환형"
+    ],
+    "heuristics": {
+      "위기형": [
+        "마감",
+        "기한",
+        "가산세",
+        "추징",
+        "조사",
+        "통지"
+      ],
+      "비교형": [
+        "차이",
+        "비교",
+        "vs",
+        "어느",
+        "유리"
+      ],
+      "전환형": [
+        "대행",
+        "상담",
+        "의뢰",
+        "수수료"
+      ],
+      "정보형": [
+        "정리",
+        "방법",
+        "기준",
+        "서류",
+        "절차"
+      ]
     },
-    "similarity_risk_control": {
-      "ban_repeated_sentences": true,
-      "rotate_examples_numbers": true,
-      "rotate_opening_patterns": true
+    "structure_overrides": {
+      "위기형": {
+        "require_deadline_box": true,
+        "faq_min": 6
+      },
+      "비교형": {
+        "require_comparison_table": true
+      },
+      "전환형": {
+        "require_case_study": true
+      }
     }
   },
   "seo": {
@@ -46,15 +89,39 @@
     "length_policy": {
       "mode": "topic_based",
       "tiers": [
-        { "type": "안내형", "min_chars": 900, "target_range": [900, 1600] },
-        { "type": "비교/사례형", "min_chars": 1600, "target_range": [1600, 2600] },
-        { "type": "심화형", "min_chars": 2200, "target_range": [2200, 3200] }
+        {
+          "type": "안내형",
+          "min_chars": 900,
+          "target_range": [
+            900,
+            1600
+          ]
+        },
+        {
+          "type": "비교/사례형",
+          "min_chars": 1600,
+          "target_range": [
+            1600,
+            2600
+          ]
+        },
+        {
+          "type": "심화형",
+          "min_chars": 2200,
+          "target_range": [
+            2200,
+            3200
+          ]
+        }
       ],
       "default_tier": "비교/사례형",
       "hard_max_chars": 3600
     },
     "paragraph_guardrails": {
-      "recommended_chars_per_paragraph": [90, 220],
+      "recommended_chars_per_paragraph": [
+        90,
+        220
+      ],
       "max_sentences_per_paragraph": 4,
       "newline_rule": "sentence_end_then_new_paragraph",
       "avoid_mid_sentence_newline": true
@@ -62,7 +129,11 @@
     "image_text_alternation": {
       "enabled": true,
       "mode": "flex",
-      "recommended_patterns": ["text-image-text-image", "text-text-image-text-image", "text-image-text-text-image"],
+      "recommended_patterns": [
+        "text-image-text-image",
+        "text-text-image-text-image",
+        "text-image-text-text-image"
+      ],
       "min_images": 3,
       "max_images": 6,
       "require_caption": true,
@@ -70,14 +141,25 @@
       "allow_table_block_without_image": true
     },
     "images": {
-      "allowed_sources": ["image_assets"],
-      "allowed_url_prefixes": ["https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/"],
+      "allowed_sources": [
+        "image_assets"
+      ],
+      "allowed_url_prefixes": [
+        "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/"
+      ],
       "deny_other_urls": true
     },
     "keyword_distribution": {
       "primary_keyword_min_occurrences": 4,
-      "primary_keyword_recommended_occurrences": [5, 8],
-      "primary_keyword_must_appear_in": ["intro_first_120_chars", "one_h2_heading_or_nearby", "summary_or_cta"],
+      "primary_keyword_recommended_occurrences": [
+        5,
+        8
+      ],
+      "primary_keyword_must_appear_in": [
+        "intro_first_120_chars",
+        "one_h2_heading_or_nearby",
+        "summary_or_cta"
+      ],
       "secondary_keywords_min_unique": 4,
       "related_terms_min_unique": 8,
       "section_spread": "avoid_clumping",
@@ -88,7 +170,13 @@
       "external_authoritative_links": {
         "min": 1,
         "max": 2,
-        "preferred_domains_hint": ["hometax.go.kr", "nts.go.kr", "law.go.kr", "korea.kr", "moef.go.kr"],
+        "preferred_domains_hint": [
+          "hometax.go.kr",
+          "nts.go.kr",
+          "law.go.kr",
+          "korea.kr",
+          "moef.go.kr"
+        ],
         "rule": "공식기관/법령/공신력 자료 우선",
         "must_check_mobile_open": true
       },
@@ -118,7 +206,9 @@
       "require_unique_angle_per_post": true,
       "require_unique_example_numbers": true,
       "rotate_section_order_within_limits": true,
-      "rotate_faq_questions": true
+      "rotate_faq_questions": true,
+      "ban_repeated_sentences": true,
+      "rotate_opening_patterns": true
     },
     "human_qc_checklist": {
       "spellcheck_required": true,
@@ -147,10 +237,19 @@
   "tags": {
     "position": "very_bottom",
     "min_total_chars": 80,
-    "target_total_chars_range": [80, 140],
+    "target_total_chars_range": [
+      80,
+      140
+    ],
     "max_tags": 12,
     "avoid_duplicates": true,
-    "required_tags": ["#세영세무회계", "#마곡회계사", "#마곡세무사", "#강서구세무사", "#은평구세무사"],
+    "required_tags": [
+      "#세영세무회계",
+      "#마곡회계사",
+      "#마곡세무사",
+      "#강서구세무사",
+      "#은평구세무사"
+    ],
     "required_tags_policy": "must_include_all",
     "topic_tags_policy": {
       "min": 3,
