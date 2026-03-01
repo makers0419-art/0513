@@ -1,197 +1,727 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "seyoung_image_assets",
   "source": {
     "type": "jsdelivr_github_cdn",
-    "input": "블로그 링크 주소.xlsx",
-    "count": 31
+    "repo": "makers0419-art/0513",
+    "path": "/rules/image_assets.json",
+    "count": 31,
+    "allowed_url_prefixes": [
+      "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/"
+    ],
+    "notes": [
+      "All image URLs must use the allowed jsdelivr prefix.",
+      "Each asset includes alt/caption templates to reduce repetitive captions and improve accessibility.",
+      "Hero candidates are marked with type=hero and can be used in both hero and inline blocks."
+    ]
+  },
+  "schema": {
+    "asset_fields": [
+      "id",
+      "topic",
+      "keywords",
+      "url",
+      "type",
+      "orientation",
+      "alt_templates",
+      "caption_templates",
+      "allowed_blocks"
+    ],
+    "enums": {
+      "type": [
+        "hero",
+        "inline"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait",
+        "square"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
+    },
+    "validation": {
+      "keywords_min": 1,
+      "alt_templates_min": 1,
+      "caption_templates_min": 1
+    }
   },
   "assets": [
     {
       "id": "VAT_URGENT_1",
       "topic": "부가세 마감 임박",
-      "keywords": ["마감", "D-7", "긴급"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_URGENT_1.png"
+      "keywords": [
+        "마감",
+        "D-7",
+        "긴급"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_URGENT_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "부가세 마감 임박 안내 이미지",
+        "부가세 마감 임박 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "부가세 마감 임박 체크 포인트",
+        "마감 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "VAT_PENALTY_1",
       "topic": "가산세 경고",
-      "keywords": ["가산세", "감면율"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_PENALTY_1.png"
+      "keywords": [
+        "가산세",
+        "감면율"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_PENALTY_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "가산세 경고 안내 이미지",
+        "가산세 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "가산세 경고 체크 포인트",
+        "가산세 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "VAT_CHECKLIST_1",
       "topic": "신고 체크리스트",
-      "keywords": ["체크리스트", "신고"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_CHECKLIST_1.png"
+      "keywords": [
+        "체크리스트",
+        "신고"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_CHECKLIST_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "신고 체크리스트 안내 이미지",
+        "신고 체크리스트 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "신고 체크리스트 체크 포인트",
+        "체크리스트 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "VAT_HOMETAX_PATH_1",
       "topic": "홈택스 경로",
-      "keywords": ["홈택스", "신고경로"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_HOMETAX_PATH_1.png"
+      "keywords": [
+        "홈택스",
+        "신고경로"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_HOMETAX_PATH_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "홈택스 경로 안내 이미지",
+        "홈택스 경로 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "홈택스 경로 체크 포인트",
+        "홈택스 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "VAT_INSTALLMENT_1",
       "topic": "카드 분납",
-      "keywords": ["분납", "납부연장"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_INSTALLMENT_1.png"
+      "keywords": [
+        "분납",
+        "납부연장"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_INSTALLMENT_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "카드 분납 안내 이미지",
+        "카드 분납 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "카드 분납 체크 포인트",
+        "분납 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "VAT_REFUND_TIMELINE_1",
       "topic": "환급 타임라인",
-      "keywords": ["환급 일정"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_REFUND_TIMELINE_1.png"
+      "keywords": [
+        "환급 일정"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_REFUND_TIMELINE_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "환급 타임라인 안내 이미지",
+        "환급 타임라인 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "환급 타임라인 체크 포인트",
+        "환급 일정 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "LATE_REPORT_TIMER_1",
       "topic": "기한후 신고 타이머",
-      "keywords": ["기한후신고"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LATE_REPORT_TIMER_1.png"
+      "keywords": [
+        "기한후신고"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LATE_REPORT_TIMER_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "기한후 신고 타이머 안내 이미지",
+        "기한후 신고 타이머 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "기한후 신고 타이머 체크 포인트",
+        "기한후신고 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "TAX_AUDIT_WARN_1",
       "topic": "세무조사 경고",
-      "keywords": ["세무조사"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/TAX_AUDIT_WARN_1.png"
+      "keywords": [
+        "세무조사"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/TAX_AUDIT_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "세무조사 경고 안내 이미지",
+        "세무조사 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "세무조사 경고 체크 포인트",
+        "세무조사 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "SALES_150M_WARN_1",
       "topic": "매출 1.5억 경고",
-      "keywords": ["1.5억", "매출"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SALES_150M_WARN_1.png"
+      "keywords": [
+        "1.5억",
+        "매출"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SALES_150M_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "매출 1.5억 경고 안내 이미지",
+        "매출 1.5억 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "매출 1.5억 경고 체크 포인트",
+        "1.5억 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "CORP_VS_SOLE_1",
       "topic": "법인 vs 개인",
-      "keywords": ["법인", "개인사업자"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CORP_VS_SOLE_1.png"
+      "keywords": [
+        "법인",
+        "개인사업자"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CORP_VS_SOLE_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "법인 vs 개인 안내 이미지",
+        "법인 vs 개인 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "법인 vs 개인 체크 포인트",
+        "법인 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "BUSINESS_LOAN_VS_TAX_1",
       "topic": "대출 vs 세금",
-      "keywords": ["대출", "세금"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_LOAN_VS_TAX_1.png"
+      "keywords": [
+        "대출",
+        "세금"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_LOAN_VS_TAX_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "대출 vs 세금 안내 이미지",
+        "대출 vs 세금 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "대출 vs 세금 체크 포인트",
+        "대출 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "PROPERTY_CAPITAL_GAIN_1",
       "topic": "부동산 양도세",
-      "keywords": ["양도세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PROPERTY_CAPITAL_GAIN_1.png"
+      "keywords": [
+        "양도세"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PROPERTY_CAPITAL_GAIN_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "부동산 양도세 안내 이미지",
+        "부동산 양도세 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "부동산 양도세 체크 포인트",
+        "양도세 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "INHERIT_6M_1",
       "topic": "상속 6개월",
-      "keywords": ["상속 신고기한"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/INHERIT_6M_1.png"
+      "keywords": [
+        "상속 신고기한"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/INHERIT_6M_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "상속 6개월 안내 이미지",
+        "상속 6개월 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "상속 6개월 체크 포인트",
+        "상속 신고기한 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "SPOUSE_30B_1",
       "topic": "배우자 30억",
-      "keywords": ["배우자 공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SPOUSE_30B_1.png"
+      "keywords": [
+        "배우자 공제"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SPOUSE_30B_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "배우자 30억 안내 이미지",
+        "배우자 30억 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "배우자 30억 체크 포인트",
+        "배우자 공제 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "REAL_ESTATE_TAX_CHECK_1",
       "topic": "재산세·종부세 점검",
-      "keywords": ["재산세", "종부세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REAL_ESTATE_TAX_CHECK_1.png"
+      "keywords": [
+        "재산세",
+        "종부세"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REAL_ESTATE_TAX_CHECK_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "재산세·종부세 점검 안내 이미지",
+        "재산세·종부세 점검 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "재산세·종부세 점검 체크 포인트",
+        "재산세 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "MULTI_HOME_FLOW_1",
       "topic": "다주택 흐름",
-      "keywords": ["다주택"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MULTI_HOME_FLOW_1.png"
+      "keywords": [
+        "다주택"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MULTI_HOME_FLOW_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "다주택 흐름 안내 이미지",
+        "다주택 흐름 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "다주택 흐름 체크 포인트",
+        "다주택 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "RURAL_HOUSE_SPECIAL_1",
       "topic": "농어촌주택 특례",
-      "keywords": ["농어촌주택"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RURAL_HOUSE_SPECIAL_1.png"
+      "keywords": [
+        "농어촌주택"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RURAL_HOUSE_SPECIAL_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "농어촌주택 특례 안내 이미지",
+        "농어촌주택 특례 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "농어촌주택 특례 체크 포인트",
+        "농어촌주택 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "RENT_DEPOSIT_TAX_1",
       "topic": "전세보증금 과세",
-      "keywords": ["전세보증금"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RENT_DEPOSIT_TAX_1.png"
+      "keywords": [
+        "전세보증금"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RENT_DEPOSIT_TAX_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "전세보증금 과세 안내 이미지",
+        "전세보증금 과세 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "전세보증금 과세 체크 포인트",
+        "전세보증금 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "YELLOW_UMBRELLA_SAVE_1",
       "topic": "노란우산공제",
-      "keywords": ["노란우산"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/YELLOW_UMBRELLA_SAVE_1.png"
+      "keywords": [
+        "노란우산"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/YELLOW_UMBRELLA_SAVE_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "노란우산공제 안내 이미지",
+        "노란우산공제 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "노란우산공제 체크 포인트",
+        "노란우산 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "EXPENSE_OX_1",
       "topic": "지출 인정/불인정",
-      "keywords": ["지출", "인정"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/EXPENSE_OX_1.png"
+      "keywords": [
+        "지출",
+        "인정"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/EXPENSE_OX_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "지출 인정/불인정 안내 이미지",
+        "지출 인정/불인정 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "지출 인정/불인정 체크 포인트",
+        "지출 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "CARD_REGISTER_SAVE_1",
       "topic": "카드 등록 절세",
-      "keywords": ["카드등록"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CARD_REGISTER_SAVE_1.png"
+      "keywords": [
+        "카드등록"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CARD_REGISTER_SAVE_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "카드 등록 절세 안내 이미지",
+        "카드 등록 절세 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "카드 등록 절세 체크 포인트",
+        "카드등록 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "CASH_RECEIPT_WARN_1",
       "topic": "현금영수증 경고",
-      "keywords": ["현금영수증"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CASH_RECEIPT_WARN_1.png"
+      "keywords": [
+        "현금영수증"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CASH_RECEIPT_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "현금영수증 경고 안내 이미지",
+        "현금영수증 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "현금영수증 경고 체크 포인트",
+        "현금영수증 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "LEGAL_CARD_WARN_1",
       "topic": "법인카드 경고",
-      "keywords": ["법인카드"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LEGAL_CARD_WARN_1.png"
+      "keywords": [
+        "법인카드"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LEGAL_CARD_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "법인카드 경고 안내 이미지",
+        "법인카드 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "법인카드 경고 체크 포인트",
+        "법인카드 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "PAYROLL_REPORT_WARN_1",
       "topic": "급여 신고 경고",
-      "keywords": ["급여", "신고"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PAYROLL_REPORT_WARN_1.png"
+      "keywords": [
+        "급여",
+        "신고"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PAYROLL_REPORT_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "급여 신고 경고 안내 이미지",
+        "급여 신고 경고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "급여 신고 경고 체크 포인트",
+        "급여 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "WHT_33_FLOW_1",
       "topic": "원천세 3.3 흐름",
-      "keywords": ["3.3%", "원천세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/WHT_33_FLOW_1.png"
+      "keywords": [
+        "3.3%",
+        "원천세"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/WHT_33_FLOW_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "원천세 3.3 흐름 안내 이미지",
+        "원천세 3.3 흐름 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "원천세 3.3 흐름 체크 포인트",
+        "3.3% 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "REFUND_FIND_1",
       "topic": "환급 찾기",
-      "keywords": ["환급 찾기"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_FIND_1.png"
+      "keywords": [
+        "환급 찾기"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_FIND_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "환급 찾기 안내 이미지",
+        "환급 찾기 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "환급 찾기 체크 포인트",
+        "환급 찾기 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "REFUND_STEPS_1",
       "topic": "환급 절차",
-      "keywords": ["환급 단계"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_STEPS_1.png"
+      "keywords": [
+        "환급 단계"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_STEPS_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "환급 절차 안내 이미지",
+        "환급 절차 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "환급 절차 체크 포인트",
+        "환급 단계 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "MEDICAL_UPLOAD_1",
       "topic": "엑셀 업로드",
-      "keywords": ["의료비 명세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MEDICAL_UPLOAD_1.png"
+      "keywords": [
+        "의료비 명세"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MEDICAL_UPLOAD_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "엑셀 업로드 안내 이미지",
+        "엑셀 업로드 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "엑셀 업로드 체크 포인트",
+        "의료비 명세 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     },
     {
       "id": "FAMILY_WARN_1",
       "topic": "가족 급여",
-      "keywords": ["증여세 위험"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/FAMILY_WARN_1.png"
+      "keywords": [
+        "증여세 위험"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/FAMILY_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "가족 급여 안내 이미지",
+        "가족 급여 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "가족 급여 체크 포인트",
+        "증여세 위험 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "BUSINESS_STATUS_WARN_1",
       "topic": "사업장현황신고",
-      "keywords": ["면세사업자"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_STATUS_WARN_1.png"
+      "keywords": [
+        "면세사업자"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_STATUS_WARN_1.png",
+      "type": "hero",
+      "orientation": "landscape",
+      "alt_templates": [
+        "사업장현황신고 안내 이미지",
+        "사업장현황신고 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "사업장현황신고 체크 포인트",
+        "면세사업자 관련 요약"
+      ],
+      "allowed_blocks": [
+        "hero",
+        "inline"
+      ]
     },
     {
       "id": "GIFT_LIMIT_1",
       "topic": "증여세 한도",
-      "keywords": ["면제한도"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/GIFT_LIMIT_1.png"
+      "keywords": [
+        "면제한도"
+      ],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/GIFT_LIMIT_1.png",
+      "type": "inline",
+      "orientation": "landscape",
+      "alt_templates": [
+        "증여세 한도 안내 이미지",
+        "증여세 한도 관련 핵심 포인트 이미지"
+      ],
+      "caption_templates": [
+        "증여세 한도 체크 포인트",
+        "면제한도 관련 요약"
+      ],
+      "allowed_blocks": [
+        "inline"
+      ]
     }
   ]
 }
