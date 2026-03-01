@@ -3,7 +3,7 @@
   "name": "seyoung_image_assets",
   "source": {
     "type": "jsdelivr_github_cdn",
-    "input": "블로그 링크주소.xlsx",
+    "input": "블로그 링크 주소.xlsx",
     "count": 31
   },
   "assets": [
@@ -38,148 +38,160 @@
       "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_INSTALLMENT_1.png"
     },
     {
-      "id": "WHT_INCOME_1",
-      "topic": "원천세",
-      "keywords": ["원천세", "신고"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/WHT_INCOME_1.png"
+      "id": "VAT_REFUND_TIMELINE_1",
+      "topic": "환급 타임라인",
+      "keywords": ["환급 일정"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/VAT_REFUND_TIMELINE_1.png"
     },
     {
-      "id": "PAYROLL_4INS_1",
-      "topic": "4대보험",
-      "keywords": ["4대보험", "정산"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PAYROLL_4INS_1.png"
+      "id": "LATE_REPORT_TIMER_1",
+      "topic": "기한후 신고 타이머",
+      "keywords": ["기한후신고"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LATE_REPORT_TIMER_1.png"
     },
     {
-      "id": "PAYROLL_SEVERANCE_1",
-      "topic": "퇴직금",
-      "keywords": ["퇴직금", "계산"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PAYROLL_SEVERANCE_1.png"
+      "id": "TAX_AUDIT_WARN_1",
+      "topic": "세무조사 경고",
+      "keywords": ["세무조사"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/TAX_AUDIT_WARN_1.png"
     },
     {
-      "id": "EXPENSE_PROOF_1",
-      "topic": "지출증빙",
-      "keywords": ["지출증빙", "증빙"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/EXPENSE_PROOF_1.png"
+      "id": "SALES_150M_WARN_1",
+      "topic": "매출 1.5억 경고",
+      "keywords": ["1.5억", "매출"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SALES_150M_WARN_1.png"
     },
     {
-      "id": "CARD_DEDUCTION_1",
-      "topic": "카드공제",
-      "keywords": ["카드", "공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CARD_DEDUCTION_1.png"
+      "id": "CORP_VS_SOLE_1",
+      "topic": "법인 vs 개인",
+      "keywords": ["법인", "개인사업자"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CORP_VS_SOLE_1.png"
     },
     {
-      "id": "CASH_RECEIPT_1",
-      "topic": "현금영수증",
-      "keywords": ["현금영수증", "발행"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CASH_RECEIPT_1.png"
+      "id": "BUSINESS_LOAN_VS_TAX_1",
+      "topic": "대출 vs 세금",
+      "keywords": ["대출", "세금"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_LOAN_VS_TAX_1.png"
     },
     {
-      "id": "SALES_INVOICE_1",
-      "topic": "세금계산서",
-      "keywords": ["세금계산서", "발행"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SALES_INVOICE_1.png"
+      "id": "PROPERTY_CAPITAL_GAIN_1",
+      "topic": "부동산 양도세",
+      "keywords": ["양도세"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PROPERTY_CAPITAL_GAIN_1.png"
     },
     {
-      "id": "REFUND_REQUEST_1",
-      "topic": "환급",
-      "keywords": ["환급", "경정청구"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_REQUEST_1.png"
+      "id": "INHERIT_6M_1",
+      "topic": "상속 6개월",
+      "keywords": ["상속 신고기한"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/INHERIT_6M_1.png"
     },
     {
-      "id": "TAX_NOTICE_1",
-      "topic": "고지서",
-      "keywords": ["고지서", "납부"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/TAX_NOTICE_1.png"
+      "id": "SPOUSE_30B_1",
+      "topic": "배우자 30억",
+      "keywords": ["배우자 공제"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SPOUSE_30B_1.png"
     },
     {
-      "id": "LATE_PENALTY_1",
-      "topic": "기한 후/무신고 가산세",
-      "keywords": ["기한후신고", "무신고", "가산세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LATE_PENALTY_1.png"
-    },
-    {
-      "id": "CORP_SETTLEMENT_1",
-      "topic": "법인 결산",
-      "keywords": ["법인", "결산"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CORP_SETTLEMENT_1.png"
-    },
-    {
-      "id": "BUSINESS_START_1",
-      "topic": "사업자등록/개업",
-      "keywords": ["사업자등록", "개업"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_START_1.png"
-    },
-    {
-      "id": "PROPERTY_TRANSFER_1",
-      "topic": "양도세",
-      "keywords": ["양도세", "양도소득세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PROPERTY_TRANSFER_1.png"
-    },
-    {
-      "id": "RENT_DEDUCTION_1",
-      "topic": "월세 세액공제",
-      "keywords": ["월세", "세액공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RENT_DEDUCTION_1.png"
-    },
-    {
-      "id": "REAL_ESTATE_TAX_1",
-      "topic": "재산세·종부세",
+      "id": "REAL_ESTATE_TAX_CHECK_1",
+      "topic": "재산세·종부세 점검",
       "keywords": ["재산세", "종부세"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REAL_ESTATE_TAX_1.png"
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REAL_ESTATE_TAX_CHECK_1.png"
     },
     {
-      "id": "FAMILY_CHILD_1",
-      "topic": "자녀 공제",
-      "keywords": ["자녀", "공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/FAMILY_CHILD_1.png"
+      "id": "MULTI_HOME_FLOW_1",
+      "topic": "다주택 흐름",
+      "keywords": ["다주택"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MULTI_HOME_FLOW_1.png"
     },
     {
-      "id": "SPOUSE_DEDUCTION_1",
-      "topic": "배우자 공제",
-      "keywords": ["배우자", "공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/SPOUSE_DEDUCTION_1.png"
+      "id": "RURAL_HOUSE_SPECIAL_1",
+      "topic": "농어촌주택 특례",
+      "keywords": ["농어촌주택"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RURAL_HOUSE_SPECIAL_1.png"
     },
     {
-      "id": "GIFT_TAX_1",
-      "topic": "증여세",
-      "keywords": ["증여세", "공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/GIFT_TAX_1.png"
+      "id": "RENT_DEPOSIT_TAX_1",
+      "topic": "전세보증금 과세",
+      "keywords": ["전세보증금"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RENT_DEPOSIT_TAX_1.png"
     },
     {
-      "id": "INHERIT_TAX_1",
-      "topic": "상속세",
-      "keywords": ["상속세", "신고"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/INHERIT_TAX_1.png"
+      "id": "YELLOW_UMBRELLA_SAVE_1",
+      "topic": "노란우산공제",
+      "keywords": ["노란우산"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/YELLOW_UMBRELLA_SAVE_1.png"
     },
     {
-      "id": "MEDICAL_DEDUCTION_1",
-      "topic": "의료비 공제",
-      "keywords": ["의료비", "공제"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MEDICAL_DEDUCTION_1.png"
+      "id": "EXPENSE_OX_1",
+      "topic": "지출 인정/불인정",
+      "keywords": ["지출", "인정"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/EXPENSE_OX_1.png"
     },
     {
-      "id": "LEGAL_DISPUTE_1",
-      "topic": "분쟁/소송",
-      "keywords": ["분쟁", "소송"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LEGAL_DISPUTE_1.png"
+      "id": "CARD_REGISTER_SAVE_1",
+      "topic": "카드 등록 절세",
+      "keywords": ["카드등록"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CARD_REGISTER_SAVE_1.png"
     },
     {
-      "id": "RURAL_TAX_1",
-      "topic": "농어촌특별세/기타",
-      "keywords": ["농특세", "부과"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/RURAL_TAX_1.png"
+      "id": "CASH_RECEIPT_WARN_1",
+      "topic": "현금영수증 경고",
+      "keywords": ["현금영수증"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/CASH_RECEIPT_WARN_1.png"
     },
     {
-      "id": "MULTI_CONSULT_1",
-      "topic": "상담",
-      "keywords": ["상담", "세무자문"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MULTI_CONSULT_1.png"
+      "id": "LEGAL_CARD_WARN_1",
+      "topic": "법인카드 경고",
+      "keywords": ["법인카드"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/LEGAL_CARD_WARN_1.png"
     },
     {
-      "id": "YELLOW_HIGHLIGHT_1",
-      "topic": "강조/하이라이트",
-      "keywords": ["핵심", "요약", "포인트"],
-      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/YELLOW_HIGHLIGHT_1.png"
+      "id": "PAYROLL_REPORT_WARN_1",
+      "topic": "급여 신고 경고",
+      "keywords": ["급여", "신고"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/PAYROLL_REPORT_WARN_1.png"
+    },
+    {
+      "id": "WHT_33_FLOW_1",
+      "topic": "원천세 3.3 흐름",
+      "keywords": ["3.3%", "원천세"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/WHT_33_FLOW_1.png"
+    },
+    {
+      "id": "REFUND_FIND_1",
+      "topic": "환급 찾기",
+      "keywords": ["환급 찾기"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_FIND_1.png"
+    },
+    {
+      "id": "REFUND_STEPS_1",
+      "topic": "환급 절차",
+      "keywords": ["환급 단계"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/REFUND_STEPS_1.png"
+    },
+    {
+      "id": "MEDICAL_UPLOAD_1",
+      "topic": "엑셀 업로드",
+      "keywords": ["의료비 명세"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/MEDICAL_UPLOAD_1.png"
+    },
+    {
+      "id": "FAMILY_WARN_1",
+      "topic": "가족 급여",
+      "keywords": ["증여세 위험"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/FAMILY_WARN_1.png"
+    },
+    {
+      "id": "BUSINESS_STATUS_WARN_1",
+      "topic": "사업장현황신고",
+      "keywords": ["면세사업자"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/BUSINESS_STATUS_WARN_1.png"
+    },
+    {
+      "id": "GIFT_LIMIT_1",
+      "topic": "증여세 한도",
+      "keywords": ["면제한도"],
+      "url": "https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/GIFT_LIMIT_1.png"
     }
   ]
 }
