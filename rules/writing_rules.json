@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "2.2",
   "tone": {
     "style": "실무형 권위 회계사",
     "ending": "습니다",
@@ -15,50 +15,40 @@
     "include_tables": true,
     "include_checklist": true,
     "include_faq": true,
-
     "min_characters": 1600,
     "recommended_characters_range": [1600, 2600],
-
     "paragraph_guardrails": {
       "recommended_chars_per_paragraph": [90, 220],
       "max_sentences_per_paragraph": 4,
       "newline_rule": "sentence_end_then_new_paragraph",
       "avoid_mid_sentence_newline": true
     },
-
     "image_text_alternation": {
       "enabled": true,
       "rule": "text-image-text-image",
-      "min_images": 3,
+      "min_images": 4,
       "require_caption": true,
       "caption_include_keyword": "soft"
     },
-
+    "images": {
+      "allowed_sources": ["image_assets"],
+      "allowed_url_prefixes": ["https://cdn.jsdelivr.net/gh/makers0419-art/0513@main/"],
+      "deny_other_urls": true
+    },
     "keyword_distribution": {
       "primary_keyword_min_occurrences": 4,
       "primary_keyword_recommended_occurrences": [5, 9],
-      "primary_keyword_must_appear_in": [
-        "intro_first_120_chars",
-        "one_h2_heading_or_nearby",
-        "summary_or_cta"
-      ],
+      "primary_keyword_must_appear_in": ["intro_first_120_chars", "one_h2_heading_or_nearby", "summary_or_cta"],
       "secondary_keywords_min_unique": 4,
       "related_terms_min_unique": 8,
       "section_spread": "avoid_clumping",
       "ban_keyword_list_style": true
     },
-
     "links_policy": {
       "external_authoritative_links": {
         "min": 1,
         "max": 2,
-        "preferred_domains_hint": [
-          "hometax.go.kr",
-          "nts.go.kr",
-          "law.go.kr",
-          "korea.kr",
-          "moef.go.kr"
-        ],
+        "preferred_domains_hint": ["hometax.go.kr", "nts.go.kr", "law.go.kr", "korea.kr", "moef.go.kr"],
         "rule": "공식기관/법령/공신력 자료 우선"
       },
       "internal_links": {
@@ -67,39 +57,37 @@
         "rule": "토픽 클러스터(관련 글) 연결"
       }
     },
-
     "trust_signals": {
       "require_real_experience_section": true,
       "require_numeric_example": true,
       "require_sources_section": true,
       "require_scope_disclaimer": true
     },
-
     "duplication_control": {
       "require_unique_angle_per_post": true,
       "require_unique_example_numbers": true,
       "rotate_section_order_within_limits": true
     },
-
     "human_qc_checklist": {
       "spellcheck_required": true,
       "fact_check_required": true,
-      "before_publish": [
-        "맞춤법 검사",
-        "금지표현/과장표현 확인",
-        "외부출처 링크 정상작동 확인",
-        "내부링크 1개 이상 확인"
-      ]
+      "before_publish": ["맞춤법 검사", "금지표현/과장표현 확인", "외부출처 링크 정상작동 확인", "내부링크 1개 이상 확인"]
     }
   },
   "conversion": {
     "cta_style": "정중하지만 구체적",
     "require_soft_cta": true,
-    "require_scope_disclaimer": true
+    "require_scope_disclaimer": true,
+    "require_fixed_footer_cta": true,
+    "footer_cta_template_id": "CTA_FOOTER_V1_FIXED_HTML"
   },
   "tags": {
-    "max_tags": 12,
-    "target_total_chars_range": [70, 110],
-    "avoid_duplicates": true
+    "position": "very_bottom",
+    "min_total_chars": 100,
+    "target_total_chars_range": [100, 180],
+    "max_tags": 20,
+    "avoid_duplicates": true,
+    "required_tags": ["#세영세무회계", "#마곡회계사", "#마곡세무사", "#강서구세무사", "#은평구세무사"],
+    "required_tags_policy": "must_include_all"
   }
 }
