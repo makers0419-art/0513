@@ -1,141 +1,647 @@
-{
-  "version": "1.1.0",
-  "name": "seyoung_plan_15_master",
-  "requires_rules": {
-    "writing_rules": "/rules/writing_rules.json",
-    "title_rules": "/rules/title_rules.json",
-    "post_template": "/rules/post_template.json",
-    "image_assets": "/rules/image_assets.json"
-  },
-  "hero_selection_rules": {
-    "strategy": "keyword-match -> topic -> fallback",
-    "no_duplicate_per_week_if_possible": true,
-    "fallback_ids": [
-      "VAT_URGENT_1",
-      "VAT_URGENT_2",
-      "TAX_AUDIT_WARN_1",
-      "TAX_AUDIT_WARN_2",
-      "BUSINESS_STATUS_1",
-      "BUSINESS_STATUS_2"
+[
+  {
+    "slot_index": 1,
+    "weekday": "Mon",
+    "time": "09:30",
+    "intent": "정보형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 102,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
     ],
-    "match_priority_fields": [
-      "intent",
-      "topic",
-      "primary_keyword",
-      "secondary_keywords",
-      "tags",
-      "keywords"
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_A_PHONE_FIRST",
+    "section_order_variant": "A",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
     ],
-    "match_method": "weighted",
-    "weights": {
-      "intent": 3,
-      "topic": 3,
-      "primary_keyword": 4,
-      "secondary_keywords": 2,
-      "tags": 1,
-      "keywords": 1
-    },
-    "note": "의도/토픽/키워드를 함께 보고 hero 이미지를 선택합니다."
-  },
-  "intent_structure_map": {
-    "정보형": {
-      "h2_count": 3,
-      "faq_count": 5,
-      "cta_strength": "soft"
-    },
-    "위기형": {
-      "h2_count": 3,
-      "faq_count": 6,
-      "cta_strength": "medium",
-      "include_deadline_box": true
-    },
-    "비교형": {
-      "h2_count": 4,
-      "faq_count": 5,
-      "cta_strength": "soft",
-      "include_table_comparison": true
-    },
-    "전환형": {
-      "h2_count": 3,
-      "faq_count": 4,
-      "cta_strength": "strong_but_polite",
-      "include_case_study": true
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
     }
   },
-  "plan_object": {
-    "week_start_date": "YYYY-MM-DD",
-    "timezone": "Asia/Seoul",
-    "posting_slots": [
-      {
-        "weekday": "Mon",
-        "times": [
-          "09:30",
-          "13:30",
-          "18:30"
-        ]
-      },
-      {
-        "weekday": "Tue",
-        "times": [
-          "09:30",
-          "13:30",
-          "18:30"
-        ]
-      },
-      {
-        "weekday": "Wed",
-        "times": [
-          "09:30",
-          "13:30",
-          "18:30"
-        ]
-      },
-      {
-        "weekday": "Thu",
-        "times": [
-          "09:30",
-          "13:30",
-          "18:30"
-        ]
-      },
-      {
-        "weekday": "Fri",
-        "times": [
-          "09:30",
-          "13:30",
-          "18:30"
-        ]
-      }
+  {
+    "slot_index": 2,
+    "weekday": "Mon",
+    "time": "13:30",
+    "intent": "체크형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 103,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
     ],
-    "posts": [
-      {
-        "slot_index": 1,
-        "weekday": "Mon",
-        "time": "09:30",
-        "intent": "정보형",
-        "topic": "",
-        "primary_keyword": "",
-        "secondary_keywords": [],
-        "target_reader": "",
-        "unique_angle": "",
-        "numeric_example_seed": 20,
-        "internal_links": [],
-        "external_sources": [],
-        "hero_image_id": "",
-        "required_blocks": [
-          "intro",
-          "toc",
-          "h2_sections",
-          "table",
-          "checklist",
-          "faq",
-          "sources",
-          "experience",
-          "cta",
-          "tags"
-        ]
-      }
-      /* slot_index 2~15까지 동일 구조로 15개를 채우세요(슬롯과 1:1 매핑) */
-    ]
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_B_KAKAO_FIRST",
+    "section_order_variant": "B",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 3,
+    "weekday": "Mon",
+    "time": "18:30",
+    "intent": "위기형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 104,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_C_MINIMAL",
+    "section_order_variant": "C",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 4,
+    "weekday": "Tue",
+    "time": "09:30",
+    "intent": "비교형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 105,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_A_PHONE_FIRST",
+    "section_order_variant": "A",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 5,
+    "weekday": "Tue",
+    "time": "13:30",
+    "intent": "전환형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 106,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_B_KAKAO_FIRST",
+    "section_order_variant": "B",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 6,
+    "weekday": "Tue",
+    "time": "18:30",
+    "intent": "정보형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 107,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_C_MINIMAL",
+    "section_order_variant": "C",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 7,
+    "weekday": "Wed",
+    "time": "09:30",
+    "intent": "체크형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 108,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_A_PHONE_FIRST",
+    "section_order_variant": "A",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 8,
+    "weekday": "Wed",
+    "time": "13:30",
+    "intent": "위기형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 109,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_B_KAKAO_FIRST",
+    "section_order_variant": "B",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 9,
+    "weekday": "Wed",
+    "time": "18:30",
+    "intent": "비교형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 110,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_C_MINIMAL",
+    "section_order_variant": "C",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 10,
+    "weekday": "Thu",
+    "time": "09:30",
+    "intent": "전환형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 111,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_A_PHONE_FIRST",
+    "section_order_variant": "A",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 11,
+    "weekday": "Thu",
+    "time": "13:30",
+    "intent": "정보형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 112,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_B_KAKAO_FIRST",
+    "section_order_variant": "B",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 12,
+    "weekday": "Thu",
+    "time": "18:30",
+    "intent": "체크형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 113,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_C_MINIMAL",
+    "section_order_variant": "C",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 13,
+    "weekday": "Fri",
+    "time": "09:30",
+    "intent": "위기형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 114,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_A_PHONE_FIRST",
+    "section_order_variant": "A",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 14,
+    "weekday": "Fri",
+    "time": "13:30",
+    "intent": "비교형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 115,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_B_KAKAO_FIRST",
+    "section_order_variant": "B",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
+  },
+  {
+    "slot_index": 15,
+    "weekday": "Fri",
+    "time": "18:30",
+    "intent": "전환형",
+    "topic": "",
+    "primary_keyword": "",
+    "secondary_keywords": [],
+    "target_reader": "",
+    "unique_angle": "",
+    "numeric_example_seed": 116,
+    "internal_link_placeholders": [
+      "[코너스톤]",
+      "[체크리스트]",
+      "[용어정리]",
+      "[절차가이드]",
+      "[사례]",
+      "[문의]"
+    ],
+    "hero_image_strategy": "auto",
+    "cta_variant_id": "CTA_C_MINIMAL",
+    "section_order_variant": "C",
+    "required_blocks": [
+      "intro",
+      "toc",
+      "h2_sections",
+      "readability_devices",
+      "images",
+      "table_or_simple_table_text",
+      "checklist",
+      "faq",
+      "sources",
+      "experience",
+      "cta",
+      "tags"
+    ],
+    "quality_gate": {
+      "min_chars": 1600,
+      "min_images": 4,
+      "faq_min": 5,
+      "internal_links_min": 5
+    }
   }
-}
+]
