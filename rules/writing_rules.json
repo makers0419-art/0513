@@ -17,16 +17,33 @@
     },
     "mid_summary": {
       "enabled": true,
-      "min_read_time_seconds": 45
+      "position_mode": "rotating",
+      "positions": [
+        "after_section_2",
+        "after_section_3"
+      ]
     },
-    "representative_image": {
-      "required": true,
-      "prefer_first_block": true,
-      "caption_keyword_soft": true
+    "section_order_rotation": {
+      "enabled": true,
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ]
     },
     "dwell_time_design": {
-      "require_mid_summary_box": true,
-      "require_checklist_before_faq": true
+      "require_one_readability_device_every_words": 260,
+      "allowed_devices": [
+        "mini_check",
+        "mini_summary",
+        "quote",
+        "simple_table_text"
+      ]
+    },
+    "engagement_nudges": {
+      "include_neighbor_hint_line": true,
+      "include_next_post_teaser": true,
+      "avoid_bot_like_requests": true
     }
   },
   "intent_engine": {
@@ -34,7 +51,8 @@
       "정보형",
       "위기형",
       "비교형",
-      "전환형"
+      "전환형",
+      "체크형"
     ],
     "heuristics": {
       "위기형": [
@@ -43,40 +61,89 @@
         "가산세",
         "추징",
         "조사",
-        "통지"
+        "통지",
+        "기한후"
       ],
       "비교형": [
         "차이",
         "비교",
         "vs",
         "어느",
-        "유리"
+        "유리",
+        "장단점"
       ],
       "전환형": [
         "대행",
         "상담",
         "의뢰",
-        "수수료"
+        "수수료",
+        "문의"
+      ],
+      "체크형": [
+        "체크리스트",
+        "준비",
+        "점검",
+        "확인",
+        "방법"
       ],
       "정보형": [
         "정리",
-        "방법",
         "기준",
         "서류",
-        "절차"
+        "절차",
+        "신고"
       ]
     },
     "structure_overrides": {
       "위기형": {
         "require_deadline_box": true,
-        "faq_min": 6
+        "faq_min": 6,
+        "cta_strength": "medium"
       },
       "비교형": {
-        "require_comparison_table": true
+        "require_comparison_table": true,
+        "cta_strength": "soft"
       },
       "전환형": {
-        "require_case_study": true
+        "require_case_study": true,
+        "cta_strength": "strong_but_polite"
+      },
+      "체크형": {
+        "require_checklist": true,
+        "cta_strength": "soft"
       }
+    }
+  },
+  "anti_ai": {
+    "sentence_length_variation": {
+      "enabled": true,
+      "allow_very_short_paragraph_ratio": 0.15,
+      "allow_long_paragraph_ratio": 0.15
+    },
+    "connector_variation": {
+      "enabled": true,
+      "avoid_repeating_starters": true
+    },
+    "opening_rotation": {
+      "enabled": true,
+      "patterns": [
+        "공감형",
+        "문제-해결약속형",
+        "짧은사례형",
+        "질문형"
+      ]
+    },
+    "cta_rotation": {
+      "enabled": true,
+      "cta_variant_ids": [
+        "CTA_A_PHONE_FIRST",
+        "CTA_B_KAKAO_FIRST",
+        "CTA_C_MINIMAL"
+      ]
+    },
+    "caption_rotation": {
+      "enabled": true,
+      "choose_from_asset_templates": true
     }
   },
   "seo": {
@@ -86,37 +153,11 @@
     "include_tables": true,
     "include_checklist": true,
     "include_faq": true,
-    "length_policy": {
-      "mode": "topic_based",
-      "tiers": [
-        {
-          "type": "안내형",
-          "min_chars": 900,
-          "target_range": [
-            900,
-            1600
-          ]
-        },
-        {
-          "type": "비교/사례형",
-          "min_chars": 1600,
-          "target_range": [
-            1600,
-            2600
-          ]
-        },
-        {
-          "type": "심화형",
-          "min_chars": 2200,
-          "target_range": [
-            2200,
-            3200
-          ]
-        }
-      ],
-      "default_tier": "비교/사례형",
-      "hard_max_chars": 3600
-    },
+    "min_characters": 1600,
+    "recommended_characters_range": [
+      1600,
+      2600
+    ],
     "paragraph_guardrails": {
       "recommended_chars_per_paragraph": [
         90,
@@ -128,17 +169,10 @@
     },
     "image_text_alternation": {
       "enabled": true,
-      "mode": "flex",
-      "recommended_patterns": [
-        "text-image-text-image",
-        "text-text-image-text-image",
-        "text-image-text-text-image"
-      ],
-      "min_images": 3,
-      "max_images": 6,
+      "rule": "text-image-text-image",
+      "min_images": 4,
       "require_caption": true,
-      "caption_include_keyword": "soft",
-      "allow_table_block_without_image": true
+      "caption_include_keyword": "soft"
     },
     "images": {
       "allowed_sources": [
@@ -153,7 +187,7 @@
       "primary_keyword_min_occurrences": 4,
       "primary_keyword_recommended_occurrences": [
         5,
-        8
+        9
       ],
       "primary_keyword_must_appear_in": [
         "intro_first_120_chars",
@@ -163,8 +197,7 @@
       "secondary_keywords_min_unique": 4,
       "related_terms_min_unique": 8,
       "section_spread": "avoid_clumping",
-      "ban_keyword_list_style": true,
-      "avoid_exact_match_back_to_back": true
+      "ban_keyword_list_style": true
     },
     "links_policy": {
       "external_authoritative_links": {
@@ -177,38 +210,24 @@
           "korea.kr",
           "moef.go.kr"
         ],
-        "rule": "공식기관/법령/공신력 자료 우선",
-        "must_check_mobile_open": true
+        "rule": "공식기관/법령/공신력 자료 우선"
       },
       "internal_links": {
-        "min": 1,
-        "max": 3,
-        "rule": "토픽 클러스터(관련 글) 연결",
-        "anchor_text_rule": "문장형 자연 링크"
+        "min": 5,
+        "max": 7,
+        "rule": "토픽 클러스터(관련 글) 연결"
       }
     },
     "trust_signals": {
       "require_real_experience_section": true,
-      "real_experience_policy": {
-        "mode": "generalized_anonymous",
-        "ban_personal_identifiers": true,
-        "add_disclaimer_line": true
-      },
       "require_numeric_example": true,
-      "numeric_example_policy": {
-        "require_unique_numbers_per_post": true,
-        "ban_unrealistic_round_numbers": true
-      },
       "require_sources_section": true,
       "require_scope_disclaimer": true
     },
     "duplication_control": {
       "require_unique_angle_per_post": true,
       "require_unique_example_numbers": true,
-      "rotate_section_order_within_limits": true,
-      "rotate_faq_questions": true,
-      "ban_repeated_sentences": true,
-      "rotate_opening_patterns": true
+      "rotate_section_order_within_limits": true
     },
     "human_qc_checklist": {
       "spellcheck_required": true,
@@ -216,10 +235,8 @@
       "before_publish": [
         "맞춤법 검사",
         "금지표현/과장표현 확인",
-        "외부출처 링크 모바일/PC 정상작동 확인",
-        "내부링크 1개 이상 확인",
-        "대표이미지/첫 이미지 캡션 확인",
-        "유사문장 반복 여부 확인"
+        "외부출처 링크 정상작동 확인",
+        "내부링크 1개 이상 확인"
       ]
     }
   },
@@ -227,11 +244,10 @@
     "cta_style": "정중하지만 구체적",
     "require_soft_cta": true,
     "require_scope_disclaimer": true,
-    "require_fixed_footer_cta": true,
-    "footer_cta_template_id": "CTA_FOOTER_V1_FIXED_HTML",
-    "cta_policy": {
-      "ban_pressure_words": true,
-      "prefer_actionable_next_step": true
+    "require_fixed_footer_cta": false,
+    "cta_links": {
+      "phone_tel": "tel:0269532587",
+      "kakao_chat": "http://pf.kakao.com/_UHxnxan/chat"
     }
   },
   "tags": {
@@ -250,11 +266,6 @@
       "#강서구세무사",
       "#은평구세무사"
     ],
-    "required_tags_policy": "must_include_all",
-    "topic_tags_policy": {
-      "min": 3,
-      "max": 7,
-      "ban_keyword_dump": true
-    }
+    "required_tags_policy": "must_include_all"
   }
 }
