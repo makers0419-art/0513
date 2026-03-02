@@ -1,34 +1,30 @@
 {
   "version": "2.2",
   "rules": {
-    "primary_keyword_position": "front",
-    "max_length": 42,
+    "primary_keyword_first": true,
+    "must_include_numbers_or_effect": true,
+    "avoid_sensationalism": true,
     "recommended_length_chars_range": [
       22,
       36
     ],
     "hard_max_length": 45,
-    "include_number_when_possible": true,
-    "prefer_specificity": true,
-    "prefer_longtail": true,
-    "avoid_prefix": [
-      "긴급",
-      "자영업"
-    ],
-    "ban_exaggerations": [
-      "100%",
+    "ban_words": [
+      "무료",
       "무조건",
-      "0원",
-      "확정",
-      "절대"
+      "100%",
+      "확실",
+      "보장"
     ],
     "ban_clickbait_patterns": [
       "충격",
       "역대급",
       "무조건 이득",
-      "몰랐다면 손해"
+      "몰랐다면 손해",
+      "대박",
+      "실화",
+      "단독"
     ],
-    "avoid_repeat_in_intro": true,
     "mobile_truncation_guard": {
       "avoid_tail_cliff": true,
       "avoid_parentheses_overuse": true
@@ -36,13 +32,9 @@
     "require_update_stamp_when_policy_changes": true,
     "prefer_date_token": "{ASOF_DATE}",
     "formats": [
-      "{KEYWORD}, 가산세 {RATE}%… 감면 구간 놓치면 얼마?",
-      "{KEYWORD}, 수입 {AMOUNT}이면 가산세 {VALUE}? 감면 가능성 체크",
-      "{TARGET} {KEYWORD}, 가산세 줄이는 현실적인 방법",
-      "{KEYWORD} 놓쳤다면? 가산세와 감면 기준 정리",
-      "{KEYWORD}, 지금 신고가 유리한지 계산해봤습니다",
+      "{KEYWORD} {NUMBER}가지로 정리 ({ASOF_DATE} 기준)",
       "{ASOF_DATE} 기준 {KEYWORD} 정리: 가산세/감면/준비서류",
-      "{TARGET} {KEYWORD} 체크: 지금 해야 할 3가지 ({ASOF_DATE} 업데이트)"
+      "{TARGET} {KEYWORD} 체크: 지금 해야 할 3가지 ({ASOF_DATE})"
     ]
   }
 }
